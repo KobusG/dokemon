@@ -1,6 +1,4 @@
 import {
-  HeartIcon,
-  LifebuoyIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/outline"
 import {
@@ -13,6 +11,7 @@ import { useNavigate } from "react-router-dom"
 import apiBaseUrl from "@/lib/api-base-url"
 import axios from "axios"
 import { cn, toastFailed } from "@/lib/utils"
+import { DownloadIcon, FileTextIcon, Globe2Icon } from "lucide-react"
 
 export function SideNavLeftBottom() {
   const navigate = useNavigate()
@@ -36,29 +35,51 @@ export function SideNavLeftBottom() {
     <ul role="list" className="-mx-2 space-y-1">
       <li>
         <a
-          href="https://github.com/sponsors/productiveops"
+          href={'http://'+window.location.hostname+':1984'}
           target="_blank"
-          className={cn(
-            "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-200 hover:bg-gray-800 hover:text-white"
-          )}
+          className={cn( "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-200 hover:bg-gray-800 hover:text-white" )}
         >
-          <HeartIcon
+          <DownloadIcon
             className="h-6 w-6 shrink-0 text-red-500"
             aria-hidden="true"
           />
-          Sponsor $1
+          Stream WebRTC
         </a>
       </li>
       <li>
         <a
-          href="https://discord.gg/Nfevu4gJVG"
+          href={'http://'+window.location.hostname+':8080'}
           target="_blank"
-          className={cn(
-            "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white"
-          )}
+          className={cn( "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-200 hover:bg-gray-800 hover:text-white" )}
         >
-          <LifebuoyIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
-          Support
+          <DownloadIcon
+            className="h-6 w-6 shrink-0 text-red-500"
+            aria-hidden="true"
+          />
+          UPDATE
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://videology-inc.atlassian.net/wiki/spaces/SUD/overview"
+          target="_blank"
+          className={cn( "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-200 hover:bg-gray-800 hover:text-white" )}
+        >
+          <FileTextIcon
+            className="h-6 w-6 shrink-0 text-red-500"
+            aria-hidden="true"
+          />
+          SCAiLX USER-GUIDE
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.videologyinc.com/"
+          target="_blank"
+          className={cn( "group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white" )}
+        >
+          <Globe2Icon className="h-6 w-6 shrink-0" aria-hidden="true" />
+          VideologyInc
         </a>
       </li>
       <li>

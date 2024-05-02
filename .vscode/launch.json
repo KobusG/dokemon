@@ -9,6 +9,7 @@
       "type": "go",
       "request": "launch",
       "mode": "auto",
+      "envFile": "${workspaceFolder}/.env",
       "program": "cmd/server/main.go"
     }
   ]

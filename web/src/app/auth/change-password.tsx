@@ -75,7 +75,7 @@ export default function ChangePassword() {
               src={`/assets/images/${
                 theme === "light"
                   ? "dokemon-light.svg"
-                  : "dokemon-dark-small.svg"
+                  : "videology-logo-dark.svg"
               }`}
               alt="Dokémon"
             />
